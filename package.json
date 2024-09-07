@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "test.issue": "node src/issue/main.js",
+    "test.fix": "node src/fix/main.js"
+  },
+  "dependencies": {
+    "ssh2": "1.15.0",
+    "ssh2-fix": "github:rmnilin/ssh2#fix/replace-nan-persistent-with-v8-eternal"
+  }
+}
