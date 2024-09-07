@@ -1,3 +1,7 @@
+The minimum conditions required to reproduce the issue that I was able to find involve making multiple sequential calls to worker threads that each import the `ssh2` library from the main thread, where `ssh2` is also imported.
+
+The problem also occurs in more real and complex scenarios where `ssh2` is used in both the main thread and worker threads. Additionally, the issue extends to scenarios where other packages that import `ssh2`, such as `dockerode` and similar libraries, are used.
+
 # Test
 
 ```sh
